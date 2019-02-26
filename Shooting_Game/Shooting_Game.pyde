@@ -6,6 +6,8 @@ from SpriteManager import sprites
 from Raindrop import Raindrop
 from JiggleBot import JiggleBot
 from ScreenSaverBot import ScreenSaverBot
+from Sprite import Sprite
+import SpriteManager
 
 def setup():
     print "Built with Processing Python version " + platform.python_version()
@@ -15,28 +17,28 @@ def setup():
     enemyTeam = 2
     player = Player(width / 2, height/ 2, playerTeam)
 
-    sprites.append(player)
-    sprites.append(Enemy(50, 50, enemyTeam))
-    sprites.append(Enemy(150, 150, enemyTeam))
-    sprites.append(Raindrop(10, 0, enemyTeam))
-    sprites.append(Raindrop(50, 0, enemyTeam))
-    sprites.append(Raindrop(90, 0, enemyTeam))
-    sprites.append(Raindrop(130, 0, enemyTeam))
-    sprites.append(Raindrop(170, 0, enemyTeam))
-    sprites.append(Raindrop(210, 0, enemyTeam))
-    sprites.append(Raindrop(300, 0, enemyTeam))
-    sprites.append(Raindrop(340, 0, enemyTeam))
-    sprites.append(Raindrop(380, 0, enemyTeam))
-    sprites.append(Raindrop(420, 0, enemyTeam))
-    sprites.append(Raindrop(460, 0, enemyTeam))
-    sprites.append(Raindrop(500, 0, enemyTeam))
-    sprites.append(JiggleBot(random(0,515), random(0,250), enemyTeam))
-    sprites.append(JiggleBot(random(0,515), random(0,250), enemyTeam))
-    sprites.append(ScreenSaverBot(random(0,500), 0, enemyTeam))
-    sprites.append(ScreenSaverBot(random(0,500), 0, enemyTeam))
-    sprites.append(ScreenSaverBot(random(0,500), 0, enemyTeam))
-    sprites.append(ScreenSaverBot(random(0,250), 0, enemyTeam))
-    sprites.append(ScreenSaverBot(random(0,250), 0, enemyTeam))
+    SpriteManager.spawn(player)
+    SpriteManager.spawn(Enemy(50, 50, enemyTeam))
+    SpriteManager.spawn(Enemy(150, 150, enemyTeam))
+    SpriteManager.spawn(Raindrop(10, 0, enemyTeam))
+    SpriteManager.spawn(Raindrop(50, 0, enemyTeam))
+    SpriteManager.spawn(Raindrop(90, 0, enemyTeam))
+    SpriteManager.spawn(Raindrop(130, 0, enemyTeam))
+    SpriteManager.spawn(Raindrop(170, 0, enemyTeam))
+    SpriteManager.spawn(Raindrop(210, 0, enemyTeam))
+    SpriteManager.spawn(Raindrop(300, 0, enemyTeam))
+    SpriteManager.spawn(Raindrop(340, 0, enemyTeam))
+    SpriteManager.spawn(Raindrop(380, 0, enemyTeam))
+    SpriteManager.spawn(Raindrop(420, 0, enemyTeam))
+    SpriteManager.spawn(Raindrop(460, 0, enemyTeam))
+    SpriteManager.spawn(Raindrop(500, 0, enemyTeam))
+    SpriteManager.spawn(JiggleBot(random(0,515), random(0,250), enemyTeam))
+    SpriteManager.spawn(JiggleBot(random(0,515), random(0,250), enemyTeam))
+    SpriteManager.spawn(ScreenSaverBot(random(0,500), 0, enemyTeam))
+    SpriteManager.spawn(ScreenSaverBot(random(0,500), 0, enemyTeam))
+    SpriteManager.spawn(ScreenSaverBot(random(0,500), 0, enemyTeam))
+    SpriteManager.spawn(ScreenSaverBot(random(0,250), 0, enemyTeam))
+    SpriteManager.spawn(ScreenSaverBot(random(0,250), 0, enemyTeam))
     
 def draw():
     global player, sprites
