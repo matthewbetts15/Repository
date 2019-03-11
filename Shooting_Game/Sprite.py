@@ -1,4 +1,6 @@
-class Sprite:
+import SpriteManager
+
+class Sprite(object):
     team = 2
     diameter = 50
     c = color(255)
@@ -8,7 +10,7 @@ class Sprite:
         self.y = y
         self.team = team
         
-    def move():
+    def move(self):
         pass
         
     def display(self):
