@@ -1,8 +1,8 @@
 from Sprite import Sprite
-
-
-class JiggleBot(Sprite):
+from Armour import Armour
+class JiggleBot(Armour, Sprite):
     
+    armour = 2
     speed = 4
     diameter = 30
     c = color(90,2,2)

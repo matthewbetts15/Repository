@@ -1,15 +1,14 @@
 from Sprite import Sprite
 from Shooter import Shooter
+from Armour import Armour
 import SpriteManager
 
-class Enemy(Shooter, Sprite):
+class Enemy(Armour, Shooter, Sprite):
+    
     
     speed = 10
     diameter = 50
     c = color(0,0,255)
-    
-
-    
     
     def move(self):
         super(Enemy, self).move()
